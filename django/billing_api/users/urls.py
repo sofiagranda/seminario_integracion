@@ -10,8 +10,8 @@ router = DefaultRouter()
 router.register(r'admin/users', UserAdminViewSet, basename='admin-users')
 
 urlpatterns = [
-    path('auth/register/', RegisterView.as_view()),
-    path('auth/login/', TokenObtainPairView.as_view()),
-    path('auth/refresh/', TokenRefreshView.as_view()),
+    path('register/', RegisterView.as_view()),
+    path('login/', TokenObtainPairView.as_view()),
+    path('refresh/', TokenRefreshView.as_view()),
     path('', include(router.urls)),
 ]
